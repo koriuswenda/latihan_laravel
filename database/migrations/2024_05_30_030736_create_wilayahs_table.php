@@ -16,8 +16,8 @@ return new class extends Migration
 
             $table->unsignedBigInteger('sinode_id')->nullable();
 
-            $table->string('nama_wilayah')->nullable(); // Gereja Baptis Waena
-            $table->string('slug')->nullable(); // gereja-baptis-waena
+            $table->string('nama_wilayah')->nullable(); // wilyah jayapura keerom dan yahukimo
+            $table->string('slug')->nullable(); // wilayah-jayapura-keerom-yahukimo
 
             $table->mediumText('alamat')->nullable();
             $table->mediumText('keterangan')->nullable();
