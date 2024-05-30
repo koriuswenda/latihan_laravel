@@ -12,8 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gerejas', function (Blueprint $table) {
+            
             $table->id();
+
+            $table->unsignedBigInteger('wilayah_id')->nullable();
+
+            $table->string('nama_gereja')->nullable(); // Gereja Baptis Waena
+            $table->string('slug')->nullable(); // gereja-baptis-waena
+
+            $table->mediumText('alamat')->nullable();
+            $table->mediumText('keterangan')->nullable();
+            $table->text('profil')->nullable();
+
+            $table->softDeletes();
             $table->timestamps();
+            
         });
     }
 
