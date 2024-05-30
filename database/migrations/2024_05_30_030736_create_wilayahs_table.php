@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('wilayahs', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('sinode_id')->nullable();
+
+            $table->string('nama_wilayah')->nullable(); // Gereja Baptis Waena
+            $table->string('slug')->nullable(); // gereja-baptis-waena
+
+            $table->mediumText('alamat')->nullable();
+            $table->mediumText('keterangan')->nullable();
+            $table->text('profil')->nullable();
+
+            $table->softDeletes();
             $table->timestamps();
         });
     }

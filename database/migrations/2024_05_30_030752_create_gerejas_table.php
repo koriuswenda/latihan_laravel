@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('gerejas', function (Blueprint $table) {
-            
+
             $table->id();
 
             $table->unsignedBigInteger('wilayah_id')->nullable();
@@ -26,7 +26,6 @@ return new class extends Migration
 
             $table->softDeletes();
             $table->timestamps();
-            
         });
     }
 
