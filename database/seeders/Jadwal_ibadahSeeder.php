@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class Agenda-kegiatanSeeder extends Seeder
+class Jadwal_ibadahSeeder extends Seeder
 {
     /**
      * Run the database seeds.
