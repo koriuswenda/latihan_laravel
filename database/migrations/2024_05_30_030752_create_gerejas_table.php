@@ -20,8 +20,11 @@ return new class extends Migration
             $table->string('nama_gereja')->nullable(); // Gereja Baptis Waena
             $table->string('slug')->nullable(); // gereja-baptis-waena
 
+            $table->mediumText('kode_gereja')->nullable();
+            $table->mediumText('nama_wilayah')->nullable();
             $table->mediumText('alamat')->nullable();
             $table->mediumText('keterangan')->nullable();
+
             $table->text('profil')->nullable();
 
             $table->softDeletes();

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('nama_wilayah')->nullable(); // wilyah jayapura keerom dan yahukimo
             $table->string('slug')->nullable(); // wilayah-jayapura-keerom-yahukimo
 
+            $table->mediumText('kode_wilayah')->nullable();
             $table->mediumText('alamat')->nullable();
             $table->mediumText('keterangan')->nullable();
             $table->text('profil')->nullable();

@@ -13,6 +13,22 @@ return new class extends Migration
     {
         Schema::create('agenda_kegiatans', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('gereja_id')->nullable();
+
+            $table->string('judul_agenda_kegiatan')->nullable(); // dalam rangkah rapat pemuda wilayah
+            $table->string('slug')->nullable(); // dalam-rangkah-rapat-pemuda-wilayah
+
+            $table->mediumText('nama_penulis')->nullable();
+            $table->longText('isi')->nullable();
+            $table->date('tanggal')->nullable();
+            $table->time('waktu')->nullable();
+
+            $table->mediumText('keterangan')->nullable();
+            $table->text('file')->nullable();
+
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }

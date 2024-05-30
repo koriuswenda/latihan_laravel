@@ -16,14 +16,15 @@ return new class extends Migration
 
             $table->unsignedBigInteger('gereja_id')->nullable();
 
-            $table->string('judul_pengumuman')->nullable(); // Rapat Pemuda Wilayah
-            $table->string('slug')->nullable(); // Rapat-Pemuda-Wilayah
+            $table->string('judul_pengumuman')->nullable(); // dalam rangkah rapat pemuda wilayah
+            $table->string('slug')->nullable(); // dalam-rangkah-rapat-pemuda-wilayah
 
-            $table->varchar('nama_penulis')->nullable();
-            $table->date('tanggal_mulai')->nullable();
-            $table->date('tanggal_selesai')->nullable();
+            $table->mediumText('nama_penulis')->nullable();
+            $table->date('tanggal_mulai')->nullabletable();
+            $table->date('tanggal_selesai')->nullabletable();
+            $table->time('waktu')->nullabletable();
             $table->mediumText('keterangan')->nullable();
-            $table->text('file')->nullable();
+            $table->text('profil')->nullable();
 
             $table->softDeletes();
             $table->timestamps();
